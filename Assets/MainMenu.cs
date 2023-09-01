@@ -50,12 +50,8 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Quit!");
+        
 
 
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            Application.Quit();
-            Debug.Log("Quit with Esc!");
-        }
     }
 }
