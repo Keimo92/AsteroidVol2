@@ -16,10 +16,14 @@ public class MediumAsteroidHit : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
+
         if (collision.gameObject.CompareTag("Bullet"))
         {
             Destroy(gameObject,0.04f);
             PlayAsteroidDestroy();
+            Scoring.totalScore += 1;
+           
         }
     }
 
@@ -30,5 +34,6 @@ public class MediumAsteroidHit : MonoBehaviour
     {
         audiosource.clip = explode;
         audiosource.PlayOneShot(audiosource.clip);
+       
     }
 }

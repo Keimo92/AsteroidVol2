@@ -37,7 +37,7 @@ public class Space_Ship_Shoot : MonoBehaviour
         PlayShootSound();
 
         // Destroy the bullet after a certain time or when it goes off-screen
-        Destroy(bullet, 3f); // Adjust the time as needed
+        Destroy(bullet, 0.7f); // Adjust the time as needed
     }
 
    void PlayShootSound()

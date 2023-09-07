@@ -14,11 +14,15 @@ public class SmallAsteroidHit : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+
+       
         if (collision.gameObject.CompareTag("Bullet"))
         {
             Destroy(gameObject,0.04f);
             PlaySmallAsteroidDestroy();
-            
+            Scoring.totalScore += 1;
+
         }
     }
 
@@ -29,5 +33,6 @@ public class SmallAsteroidHit : MonoBehaviour
     {
         audiosource.clip = explode;
         audiosource.PlayOneShot(audiosource.clip);
+       
     }
 }

@@ -19,6 +19,7 @@ public class Asteroid_Split : MonoBehaviour
     private void Start()
     {
         audiosource.GetComponent<AudioSource>();
+        
     }
 
     public void Split()
@@ -42,6 +43,11 @@ public class Asteroid_Split : MonoBehaviour
         // Destroy the medium asteroids after a certain time or when off-screen
         Destroy(mediumAsteroid1, 15f); // Adjust the time as needed
         Destroy(smallAsteroid2, 15f);
+
+
+        Scoring.totalScore += 1;
+
+        
 
         // You can repeat the same process for spawning small asteroids from medium ones if desired
     }
