@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Start()
     {
-      
+        
         audiosources.GetComponent<AudioSource>();
     }
 
@@ -89,6 +89,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
+
         if (collision.gameObject.CompareTag("Asteroid")) // Im passing coroutine inside collision enter and code runs it first 2 sec delay and then destroy.
         {
             StartCoroutine(PlayerHit());
@@ -103,6 +105,7 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(PlayerHit());
             PlayerHit();
             PlayShipDestroy();
+            
         }
 
 

@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
 {
+
     private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
+
+
         anim = GetComponent<Animator>();
     }
 
@@ -23,7 +26,7 @@ public class PlayerLife : MonoBehaviour
 
 
 
-        
+
 
         if (collision.gameObject.CompareTag("MediumAsteroid"))
         {
@@ -38,8 +41,17 @@ public class PlayerLife : MonoBehaviour
     }
 
 
-    private void Die()
+    public void Die()
     {
+        Space_Ship_Shoot spaceshipshoot = GetComponent<Space_Ship_Shoot>();
+
+        spaceshipshoot.GetComponent<Space_Ship_Shoot>().enabled = false;
+
+        PlayerMovement playerMovement = GetComponent<PlayerMovement>();
+
+        playerMovement.GetComponent<PlayerMovement>().enabled = false;
+
         anim.SetTrigger("dead");
+
     }
 }

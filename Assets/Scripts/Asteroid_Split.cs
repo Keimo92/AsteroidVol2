@@ -45,7 +45,7 @@ public class Asteroid_Split : MonoBehaviour
         Destroy(smallAsteroid2, 15f);
 
 
-        Scoring.totalScore += 1;
+        Scoring.instance.AddPoint(10);
 
         
 

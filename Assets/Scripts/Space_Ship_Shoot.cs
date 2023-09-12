@@ -16,7 +16,9 @@ public class Space_Ship_Shoot : MonoBehaviour
 
     private void Start()
     {
+        
         audiosource = GetComponent<AudioSource>();
+        
     }
 
 
@@ -28,7 +30,7 @@ public class Space_Ship_Shoot : MonoBehaviour
         }
     }
 
-    void Shoot()
+    public void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
         Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
@@ -46,6 +48,9 @@ public class Space_Ship_Shoot : MonoBehaviour
         audiosource.clip = shoot;
         audiosource.PlayOneShot(audiosource.clip);
     }
+
+
+   
    
 }
 

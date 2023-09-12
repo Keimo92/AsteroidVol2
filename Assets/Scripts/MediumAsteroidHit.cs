@@ -22,8 +22,8 @@ public class MediumAsteroidHit : MonoBehaviour
         {
             Destroy(gameObject,0.04f);
             PlayAsteroidDestroy();
-            Scoring.totalScore += 1;
-           
+            Scoring.instance.AddPoint(5);
+
         }
     }
 

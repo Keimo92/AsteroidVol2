@@ -21,7 +21,7 @@ public class SmallAsteroidHit : MonoBehaviour
         {
             Destroy(gameObject,0.04f);
             PlaySmallAsteroidDestroy();
-            Scoring.totalScore += 1;
+            Scoring.instance.AddPoint(5);
 
         }
     }
